@@ -13,6 +13,10 @@ public class Game {
         return player1 != null && player2 != null;
     }
 
+    public boolean isReadyToStart() {
+        return isComplete() && player1.isReady() && player2.isReady();
+    }
+
     public Player getPlayer1() {
         return player1;
     }
