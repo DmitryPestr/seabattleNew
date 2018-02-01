@@ -16,7 +16,7 @@
 <div class="w3-display-container container">
     <div class="w3-card-4 w3-display-middle">
         <header class="w3-container w3-blue">
-            <h2>Please wait...</h2>
+            <h2>${playerGameContext.player.name}, please wait...</h2>
         </header>
         <div class="w3-container w3-center w3-text-blue w3-padding">
             <p>
