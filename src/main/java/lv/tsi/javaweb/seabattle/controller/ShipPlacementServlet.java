@@ -28,8 +28,10 @@ public class ShipPlacementServlet extends HttpServlet {
         Field f = p.getMyField();
 
         f.clear();
-        for (String a: addresses) {
-            f.setShip(a);
+        if (addresses != null) {
+            for (String a : addresses) {
+                f.setShip(a);
+            }
         }
 
         f.validate();
