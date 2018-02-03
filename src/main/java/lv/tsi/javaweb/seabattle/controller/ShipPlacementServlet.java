@@ -26,16 +26,21 @@ public class ShipPlacementServlet extends HttpServlet {
         String[] addresses = request.getParameterValues("addr");
         Player p = playerGameContext.getPlayer();
         Field f = p.getMyField();
+
         f.clear();
         for (String a: addresses) {
             f.setShip(a);
         }
-        if (f.isValid()) {
+
+        f.validate();
+
+        if (f.isInvalid()) {
+            request.getRequestDispatcher("/WEB-INF/shipPlacement.jsp")
+                    .include(request, response);
+        } else {
             p.setReady(true);
             response.sendRedirect("waitEnemyPlacement");
         }
-        request.getRequestDispatcher("/WEB-INF/shipPlacement.jsp")
-                .include(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

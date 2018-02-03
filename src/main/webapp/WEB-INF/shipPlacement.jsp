@@ -8,6 +8,10 @@
 
 <c:set var="myField" value="${playerGameContext.player.myField}"/>
 
+<c:if test="${myField.invalid}">
+    <h2>Your ships are not placed correctly. Please check and correct.</h2>
+</c:if>
+
 <form method="post">
     <table style="text-align: center">
         <tr>
