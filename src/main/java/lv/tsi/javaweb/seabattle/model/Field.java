@@ -10,6 +10,7 @@ import java.util.Map;
  */
 public class Field {
     private Map<String, CellContent> content = new HashMap<>();
+    private boolean invalid;
 
     public void setShip(String addr) {
         content.put(addr, CellContent.SHIP);
@@ -27,15 +28,12 @@ public class Field {
         content.clear();
     }
 
-    public boolean isValid() {
-        if (content.size() != 20) {
-            return false;
-        }
-        return checkPlacement();
+    public void validate() {
+        this.invalid = content.size() != 20;
     }
 
-    private boolean checkPlacement() {
-        // TODO
-        return true;
+    public boolean isInvalid() {
+        return invalid;
     }
+
 }
