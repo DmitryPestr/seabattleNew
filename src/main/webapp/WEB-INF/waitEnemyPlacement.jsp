@@ -18,7 +18,7 @@
         </header>
         <div class="w3-container w3-center w3-text-blue w3-padding">
             <p>
-                <i class="fas fa-spinner fa-5x fa-spin"></i>
+                <i class="fas fa-location-arrow fa-5x fa-spin"></i>
             </p>
             <p>
                 <b>Your opponent is placing his/her ships!</b>
