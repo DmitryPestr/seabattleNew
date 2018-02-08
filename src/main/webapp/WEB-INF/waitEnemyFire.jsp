@@ -49,7 +49,7 @@
     <c:set var="enemyField" value="${playerGameContext.player.enemyField}"/>
 
 
-    <form method="post" class="w3-padding">
+    <div class="w3-padding">
 
 <%--  pervoe pole (mojo pole) (pole pervogo igroka) --%>
 
@@ -85,18 +85,13 @@
                     <c:forEach var="col" items="A,B,C,D,E,F,G,H,I,J">
                         <c:set var="addr" value="${col}${row}"/>
                         <td class="${enemyField.getCell(addr)}">
-                            <input type="radio" name="addr" value="${addr}">
                         </td>
                     </c:forEach>
                 </tr>
             </c:forEach>
         </table>
 
-<%--    ---------------------          --%>
-
-    <div>
-        <input class="w3-button" type="submit" value="Fire!">
-    </div>
+<%--       ---------------------          --%>
 
     </form>
 </div>

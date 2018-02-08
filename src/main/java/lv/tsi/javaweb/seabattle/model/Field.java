@@ -29,11 +29,14 @@ public class Field {
     }
 
     public void validate() {
-        this.invalid = content.size() != 20;
+        this.invalid = content.size() != 2;
     }
 
     public boolean isInvalid() {
         return invalid;
     }
 
+    public void setCell(String addr, CellContent value) {
+        content.put(addr, value);
+    }
 }
