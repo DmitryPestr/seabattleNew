@@ -1,3 +1,5 @@
+package lv.tsi.javaweb.seabattle.controller;
+
 import javax.enterprise.context.SessionScoped;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
