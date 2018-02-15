@@ -12,6 +12,10 @@ public class Field {
     private Map<String, CellContent> content = new HashMap<>();
     private boolean invalid;
 
+    public boolean hasMoreShips() {
+        return content.containsValue(CellContent.SHIP);
+    }
+
     public void setShip(String addr) {
         content.put(addr, CellContent.SHIP);
     }
@@ -29,7 +33,7 @@ public class Field {
     }
 
     public void validate() {
-        this.invalid = content.size() != 2;
+        this.invalid = content.size() != 2;   /*kolichestvo korablej v igre (neobhodimoe dlja nachala igri)*/
     }
 
     public boolean isInvalid() {
